@@ -1,0 +1,20 @@
+[package]
+name = "ethereum"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"
+
+[dependencies]
+libp2p = { version = "0.55.1", path = "../../libp2p", features = ["identify", "gossipsub", "noise", "yamux"] }
+libp2p-swarm = { workspace = true, path = "../../swarm" }
+libp2p-core = { path = "../../core" }
+libp2p-tcp = { path = "../../transports/tcp", features = ["tokio"] }
+libp2p-noise = { path = "../../transports/noise" }
+libp2p-yamux = { path = "../../muxers/yamux" }
+libp2p-gossipsub = { path = "../../protocols/gossipsub" }
+futures = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+x25519-dalek = "2.0.1"
+
+[lints]
+workspace = true

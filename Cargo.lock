@@ -1510,6 +1510,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "ethereum"
+version = "0.1.0"
+dependencies = [
+ "futures",
+ "libp2p",
+ "libp2p-core",
+ "libp2p-gossipsub",
+ "libp2p-noise",
+ "libp2p-swarm",
+ "libp2p-tcp",
+ "libp2p-yamux",
+ "tokio",
+ "x25519-dalek",
+]
+
+[[package]]
 name = "event-listener"
 version = "2.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"

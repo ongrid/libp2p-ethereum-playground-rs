@@ -23,11 +23,18 @@
 use std::error::Error;
 
 use futures::StreamExt;
+use libp2p::identity;
+use libp2p::PeerId;
 use libp2p::{core::multiaddr::Multiaddr, identify, noise, swarm::SwarmEvent, tcp, yamux};
 use tracing_subscriber::EnvFilter;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
+    let keypair = identity::Keypair::generate_secp256k1();
+    let peer_id = PeerId::from(keypair.public());
+
+    println!("Local Peer ID: {:?}", peer_id);
+
     let _ = tracing_subscriber::fmt()
         .with_env_filter(EnvFilter::from_default_env())
         .try_init();
