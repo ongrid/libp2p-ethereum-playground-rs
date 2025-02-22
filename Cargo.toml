@@ -7,6 +7,7 @@ members = [
     "examples/chat",
     "examples/dcutr",
     "examples/distributed-key-value-store",
+    "examples/ethereum",
     "examples/file-sharing",
     "examples/identify",
     "examples/ipfs-kad",
@@ -64,7 +65,7 @@ members = [
     "transports/websocket-websys",
     "transports/websocket",
     "transports/webtransport-websys",
-    "wasm-tests/webtransport-tests",
+    "wasm-tests/webtransport-tests", "examples/ethereum",
 ]
 resolver = "2"
 

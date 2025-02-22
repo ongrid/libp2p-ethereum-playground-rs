@@ -1,0 +1,14 @@
+[package]
+name = "ethereum"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+futures = { workspace = true }
+libp2p = { path = "../../libp2p", features = ["identify", "noise", "tcp", "tokio", "yamux", "secp256k1"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[lints]
+workspace = true
